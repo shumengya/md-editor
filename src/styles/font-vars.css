@@ -1,0 +1,15 @@
+:root,
+[data-theme="dark"],
+[data-theme="light"] {
+  --font-ui: "Source Han Serif SC", "Noto Serif CJK SC", "STSong", "SimSun", serif;
+  --font-code: var(--font-ui);
+  --fontStack-sansSerif: var(--font-ui);
+  --fontStack-monospace: var(--font-ui);
+}
+
+/* github-markdown-css 在 .markdown-body 作用域内重新定义了这两个变量，
+   需要在同等级覆盖，否则 :root 定义会被其同名变量遮蔽 */
+.markdown-body {
+  --fontStack-sansSerif: var(--font-ui);
+  --fontStack-monospace: var(--font-ui);
+}

@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── 暗色主题（默认） ───────────────────────────── */
+:root,
+[data-theme="dark"] {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --bg-toolbar: #2d2d2d;
+  --bg-statusbar: #007acc;
+  --bg-dropdown: #2d2d2d;
+  --border-color: #3e3e42;
+  --text-primary: #d4d4d4;
+  --text-secondary: #9d9d9d;
+  --text-muted: #6e6e6e;
+  --accent: #007acc;
+  --accent-hover: #1a8ad4;
+  --scrollbar-thumb: #424242;
+  --scrollbar-track: #1e1e1e;
+  --divider: #454545;
+  --editor-bg: #1e1e1e;
+  --preview-bg: #0d1117;
+  --dropdown-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --dropdown-item-hover: rgba(255, 255, 255, 0.08);
+  --view-btn-bg: #1e1e1e;
+}
+
+/* ─── 浅色主题 ───────────────────────────────────── */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-toolbar: #f3f3f3;
+  --bg-statusbar: #007acc;
+  --bg-dropdown: #ffffff;
+  --border-color: #e4e4e4;
+  --text-primary: #1f1f1f;
+  --text-secondary: #555555;
+  --text-muted: #999999;
+  --accent: #0078d4;
+  --accent-hover: #106ebe;
+  --scrollbar-thumb: #c8c8c8;
+  --scrollbar-track: #f0f0f0;
+  --divider: #e0e0e0;
+  --editor-bg: #ffffff;
+  --preview-bg: #ffffff;
+  --dropdown-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --dropdown-item-hover: rgba(0, 0, 0, 0.05);
+  --view-btn-bg: #e8e8e8;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Android safe-area: push content below system status bar */
+html {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--bg-toolbar);
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  user-select: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.app,
+.app button,
+.app input,
+.app textarea,
+.app select {
+  font-family: var(--font-ui);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+}

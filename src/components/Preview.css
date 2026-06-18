@@ -1,0 +1,128 @@
+.preview-wrapper {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  transition: background 0.2s;
+  user-select: text;
+}
+
+[data-theme="dark"] .preview-wrapper,
+.preview-wrapper[data-theme="dark"] {
+  background: #0d1117;
+}
+
+[data-theme="light"] .preview-wrapper,
+.preview-wrapper[data-theme="light"] {
+  background: #ffffff;
+}
+
+.preview-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 40px;
+  box-sizing: border-box;
+  font-family: var(--font-ui);
+}
+
+/* ─── 深色模式覆盖 ────────────────────────────────── */
+.markdown-body[data-color-mode="dark"] {
+  background-color: transparent !important;
+  color: #e6edf3;
+}
+
+.markdown-body[data-color-mode="dark"] pre {
+  background-color: #161b22 !important;
+}
+
+.markdown-body[data-color-mode="dark"] code:not(pre code) {
+  background-color: rgba(110, 118, 129, 0.2) !important;
+  color: #e6edf3;
+}
+
+.markdown-body[data-color-mode="dark"] blockquote {
+  border-left-color: #30363d;
+  color: #8b949e;
+}
+
+.markdown-body[data-color-mode="dark"] table tr {
+  border-top-color: #30363d;
+  background-color: transparent;
+}
+
+.markdown-body[data-color-mode="dark"] table tr:nth-child(2n) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.markdown-body[data-color-mode="dark"] table td,
+.markdown-body[data-color-mode="dark"] table th {
+  border-color: #30363d;
+}
+
+.markdown-body[data-color-mode="dark"] hr {
+  border-color: #21262d;
+}
+
+.markdown-body[data-color-mode="dark"] h1,
+.markdown-body[data-color-mode="dark"] h2 {
+  border-bottom-color: #21262d;
+}
+
+.markdown-body[data-color-mode="dark"] a {
+  color: #58a6ff;
+}
+
+/* ─── 深色模式 highlight.js 覆盖 ─────────────────── */
+.markdown-body[data-color-mode="dark"] .hljs {
+  background: #161b22;
+  color: #c9d1d9;
+}
+
+.markdown-body[data-color-mode="dark"] .hljs-keyword,
+.markdown-body[data-color-mode="dark"] .hljs-selector-tag { color: #ff7b72; }
+
+.markdown-body[data-color-mode="dark"] .hljs-string,
+.markdown-body[data-color-mode="dark"] .hljs-attr { color: #a5d6ff; }
+
+.markdown-body[data-color-mode="dark"] .hljs-comment { color: #8b949e; }
+
+.markdown-body[data-color-mode="dark"] .hljs-number,
+.markdown-body[data-color-mode="dark"] .hljs-literal { color: #79c0ff; }
+
+.markdown-body[data-color-mode="dark"] .hljs-title,
+.markdown-body[data-color-mode="dark"] .hljs-function { color: #d2a8ff; }
+
+.markdown-body[data-color-mode="dark"] .hljs-type,
+.markdown-body[data-color-mode="dark"] .hljs-built_in { color: #ffa657; }
+
+/* ─── 浅色模式 ────────────────────────────────────── */
+.markdown-body[data-color-mode="light"] {
+  background-color: transparent !important;
+  color: #1f2328;
+}
+
+/* ─── 统一选中高亮颜色 ───────────────────────────── */
+.preview-wrapper *::selection {
+  background: #3390ff;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .preview-wrapper *::selection,
+.preview-wrapper[data-theme="dark"] *::selection {
+  background: #264f78;
+  color: #e6edf3;
+}
+
+/* ─── 通用字体覆盖 ───────────────────────────────── */
+.markdown-body {
+  font-family: var(--font-ui) !important;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body pre code,
+.markdown-body .hljs,
+.markdown-body tt,
+.markdown-body kbd,
+.markdown-body samp {
+  font-family: var(--font-code) !important;
+}

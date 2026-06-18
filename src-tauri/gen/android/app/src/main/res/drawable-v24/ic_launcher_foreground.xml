@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+
+    <!-- Document body -->
+    <path
+        android:fillColor="#EBFFFFFF"
+        android:pathData="M225,154 L680,154 L800,274 L800,870 L225,870 Z" />
+
+    <!-- Dog-ear fold triangle -->
+    <path
+        android:fillColor="#D9B8CEFA"
+        android:pathData="M680,154 L800,274 L680,274 Z" />
+
+    <!-- M letterform — left upright -->
+    <path
+        android:fillColor="#FF1A5ACC"
+        android:pathData="M278,205 L334,205 L334,543 L278,543 Z" />
+
+    <!-- M letterform — right upright -->
+    <path
+        android:fillColor="#FF1A5ACC"
+        android:pathData="M616,205 L672,205 L672,543 L616,543 Z" />
+
+    <!-- M letterform — left diagonal -->
+    <path
+        android:fillColor="#FF1A5ACC"
+        android:pathData="M278,205 L334,205 L504,440 L448,440 Z" />
+
+    <!-- M letterform — right diagonal -->
+    <path
+        android:fillColor="#FF1A5ACC"
+        android:pathData="M504,440 L560,440 L672,205 L616,205 Z" />
+
+    <!-- Text lines -->
+    <path
+        android:fillColor="#994A7AD4"
+        android:pathData="M278,570 L746,570 L746,598 L278,598 Z" />
+    <path
+        android:fillColor="#994A7AD4"
+        android:pathData="M278,636 L746,636 L746,664 L278,664 Z" />
+    <path
+        android:fillColor="#994A7AD4"
+        android:pathData="M278,702 L546,702 L546,730 L278,730 Z" />
+</vector>

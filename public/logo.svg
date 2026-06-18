@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#1954B4"/>
+    </linearGradient>
+    <clipPath id="round">
+      <rect x="40" y="40" width="944" height="944" rx="205" ry="205"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect x="40" y="40" width="944" height="944" rx="205" ry="205" fill="url(#bg)"/>
+
+  <!-- Document body -->
+  <polygon points="225,154 680,154 800,274 800,870 225,870" fill="white" fill-opacity="0.92"/>
+
+  <!-- Fold triangle -->
+  <polygon points="680,154 800,274 680,274" fill="#B8CEFA" fill-opacity="0.85"/>
+
+  <!-- M letterform -->
+  <!-- Left upright -->
+  <rect x="278" y="205" width="56" height="338" rx="8" fill="#1A5ACC"/>
+  <!-- Right upright -->
+  <rect x="616" y="205" width="56" height="338" rx="8" fill="#1A5ACC"/>
+  <!-- Left diagonal (top-left to center-bottom) -->
+  <polygon points="278,205 334,205 504,440 448,440" fill="#1A5ACC"/>
+  <!-- Right diagonal (center-bottom to top-right) -->
+  <polygon points="504,440 560,440 672,205 616,205" fill="#1A5ACC"/>
+
+  <!-- Text lines -->
+  <rect x="278" y="570" width="468" height="28" rx="14" fill="#4A7AD4" fill-opacity="0.6"/>
+  <rect x="278" y="636" width="468" height="28" rx="14" fill="#4A7AD4" fill-opacity="0.6"/>
+  <rect x="278" y="702" width="268" height="28" rx="14" fill="#4A7AD4" fill-opacity="0.6"/>
+</svg>

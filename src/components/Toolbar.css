@@ -1,0 +1,281 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background: var(--bg-toolbar);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 8px;
+  gap: 8px;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+  -webkit-app-region: drag;
+}
+
+.toolbar-left,
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  -webkit-app-region: no-drag;
+}
+
+.toolbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding-left: 6px;
+  border-left: 1px solid var(--border-color);
+}
+
+.tb-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  -webkit-app-region: no-drag;
+}
+
+.tb-btn:hover {
+  background: var(--dropdown-item-hover);
+  color: var(--text-primary);
+}
+
+.tb-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  color: var(--text-secondary);
+  transition: background 0.15s, color 0.15s;
+  -webkit-app-region: no-drag;
+}
+
+.tb-icon-btn:hover,
+.tb-icon-btn.active {
+  background: var(--dropdown-item-hover);
+  color: var(--text-primary);
+}
+
+.file-name {
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 12px;
+  -webkit-app-region: drag;
+  cursor: default;
+}
+
+.file-name.unsaved {
+  color: var(--accent);
+}
+
+/* ─── 视图切换 ───────────────────────────────────── */
+.view-toggle {
+  display: flex;
+  align-items: center;
+  background: var(--view-btn-bg);
+  border-radius: 6px;
+  padding: 2px;
+  gap: 1px;
+  -webkit-app-region: no-drag;
+}
+
+.view-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+  transition: background 0.15s, color 0.15s;
+  -webkit-app-region: no-drag;
+}
+
+.view-btn:hover {
+  color: var(--text-secondary);
+  background: var(--dropdown-item-hover);
+}
+
+.view-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ─── 更多菜单 ────────────────────────────────────── */
+.more-menu-wrap {
+  position: relative;
+  z-index: 3;
+  -webkit-app-region: no-drag;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 200px;
+  background: var(--bg-dropdown);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: var(--dropdown-shadow);
+  z-index: 1000;
+  animation: dropdownFadeIn 0.1s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  color: var(--text-primary);
+  text-align: left;
+  transition: background 0.1s;
+  -webkit-app-region: no-drag;
+}
+
+.dropdown-item:hover {
+  background: var(--dropdown-item-hover);
+}
+
+.dropdown-shortcut {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-ui);
+}
+
+.dropdown-separator {
+  height: 1px;
+  background: var(--border-color);
+  margin: 4px 6px;
+}
+
+.dropdown-version {
+  padding: 5px 10px;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ─── 窗口控制 ────────────────────────────────────── */
+.window-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 6px;
+  -webkit-app-region: no-drag;
+}
+
+.wc-btn {
+  width: 12px;
+  height: 12px;
+  padding: 6px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-clip: content-box;
+  box-sizing: content-box;
+  transition: filter 0.15s, transform 0.1s;
+  -webkit-app-region: no-drag;
+  flex-shrink: 0;
+}
+
+.wc-btn:hover {
+  filter: brightness(1.25);
+  transform: scale(1.1);
+}
+
+.wc-btn:active {
+  transform: scale(0.95);
+}
+
+.wc-btn.minimize { background: #f5a623; }
+.wc-btn.maximize { background: #27c93f; }
+.wc-btn.close    { background: #ff5f57; }
+
+/* ─── 手机响应式 ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .toolbar {
+    height: 48px;
+    padding: 0 6px;
+    gap: 4px;
+    -webkit-app-region: unset;
+  }
+
+  /* 隐藏 macOS 风格窗口控制按钮 */
+  .window-controls {
+    display: none;
+  }
+
+  /* 隐藏分屏按钮（手机屏太窄） */
+  .view-btn-split {
+    display: none;
+  }
+
+  /* 隐藏按钮文字标签，只保留图标 */
+  .tb-btn span,
+  .view-btn-label {
+    display: none;
+  }
+
+  /* 隐藏新建 / 保存 / 另存为，只保留打开（⋮ 菜单已包含全部操作） */
+  .tb-btn-new,
+  .tb-btn-save,
+  .tb-btn-saveas {
+    display: none;
+  }
+
+  /* 加大触摸目标高度 */
+  .tb-btn,
+  .view-btn,
+  .tb-icon-btn {
+    min-height: 40px;
+    padding: 8px 10px;
+  }
+
+  .file-name {
+    font-size: 12px;
+    padding: 0 6px;
+  }
+
+  .view-toggle {
+    padding: 3px;
+  }
+}
